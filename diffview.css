@@ -81,6 +81,12 @@ table.diff th.author {
 	border-top:1px solid #BBC;
 	background:#EFEFEF
 }
+
+table.diff div {
+	word-wrap: break-word;
+	word-break: break-all;
+}
+
 ins.diff {
 	background-color: #50FF50;
 	text-decoration: none;
