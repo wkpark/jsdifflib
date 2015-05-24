@@ -41,7 +41,9 @@ var difflib = {
 		var lfpos = str.indexOf("\n");
 		var crpos = str.indexOf("\r");
 		var linebreak = ((lfpos > -1 && crpos > -1) || crpos < 0) ? "\n" : "\r";
-		
+
+		if (str.substr(str.length - 1) != linebreak)
+			str+= linebreak;
 		var lines = str.split(linebreak);
 		for (var i = 0; i < lines.length; i++) {
 			lines[i] = difflib.stripLinebreaks(lines[i]);
