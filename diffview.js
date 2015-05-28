@@ -181,6 +181,8 @@ diffview = {
 						if (wordlevel) {
 						var baseTextLine = baseTextLines[b];
 						var newTextLine = newTextLines[n];
+						if (!baseTextLine) baseTextLine = '';
+						if (!newTextLine) newTextLine = '';
 						var wordrule = /([^\S]+|[a-zA-Z0-9_-]+|[\uac00-\ud7af]+|.)(?:(?!<)[^\S\s])?/;
 						var bw = baseTextLine.split(wordrule).filter(function(n) {return n;});
 						var nw = newTextLine.split(wordrule).filter(function(n) {return n;});
